@@ -1,7 +1,7 @@
-import { SERVICE_URL } from "../component/constants/Service";
-import AppConfig from "../component/constants/AppConfig";
+import { SERVICE_URL } from "../components/constants/Service";
+import AppConfig from "../components/constants/AppConfig";
 import ApiCalling from "./Api";
-import AsyncStorage from "@react-native-community/async-storage";
+import AsyncStorage from '@react-native-async-storage/async-storage';;
 import { ToastAndroid } from "react-native";
 class _commonApi {
     setFCMToken = async (fcmToken, props) => {
