@@ -21,8 +21,8 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { globalStyle } from "./src/styles/GlobalStyles" ;
-import Login from "./src/components/screens/Login";
 import Profile from "./src/components/screens/Profile";
+import EditProfile from "./src/components/screens/EditProfile";
 
 const Stack = createStackNavigator();
 
@@ -37,22 +37,22 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={"Profile"}
+        <Stack.Navigator initialRouteName={"EditProfile"}
             screenOptions={{
               headerTintColor: "white",
               headerStyle: {
                 backgroundColor: globalStyle.secondaryThemeColor,
               },
             }}>
-          <Stack.Screen name="Login" component={Login} 
-          options={{
-            headerShown: false,
-          }}
-          />
           <Stack.Screen name="Profile" component={Profile} options={{
               headerShown: false,
             }}
             />
+            <Stack.Screen name="EditProfile" component={EditProfile} 
+          options={{
+            headerShown: true,
+          }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
